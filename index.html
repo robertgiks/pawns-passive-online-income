@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawns.app - Earn Passive Income by Sharing Your Internet Connection</title>
+    <meta name="description" content="Turn your unused internet bandwidth into passive income with Pawns.app. Download our app for PC or smartphone and start earning money effortlessly. Join thousands of users worldwide.">
+    <meta name="keywords" content="passive income, internet sharing, bandwidth sharing, earn money online, side income, Pawns app">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pawns.app - Earn Passive Income by Sharing Your Internet">
+    <meta property="og:description" content="Transform your unused internet connection into steady passive income. Simple setup, secure platform, instant payouts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pawns.app">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/6366f1/ffffff?text=Pawns.app">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pawns.app - Earn Passive Income by Sharing Your Internet">
+    <meta name="twitter:description" content="Transform your unused internet connection into steady passive income. Simple setup, secure platform, instant payouts.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/6366f1/ffffff?text=Pawns.app">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Pawns.app",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Windows, Android, iOS",
+        "description": "Earn passive income by sharing your internet connection",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "15000"
+        }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            height: 42px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #6366f1;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><rect width="100%" height="100%" fill="url(%23a)"/></svg>');
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        
+        .btn-primary, .btn-secondary {
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-primary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.95);
+            color: #6366f1;
+            border: 2px solid transparent;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .feature-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        /* How It Works Section */
+        .how-it-works {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .step h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .step p {
+            color: #6b7280;
+        }
+        
+        /* Earnings Section */
+        .earnings {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .earnings-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .earnings-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+        }
+        
+        .earnings-text p {
+            font-size: 1.1rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+        
+        .earning-methods {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .earning-methods li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .earning-methods li::before {
+            content: '✓';
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .earnings-visual {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .earnings-chart {
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+        
+        /* Download Section */
+        .download {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .download-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial {
+            background: #f9fafb;
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid #6366f1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 1rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+            }
+            
+            .earnings-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .feature-card, .step, .testimonial {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <img src="https://via.placeholder.com/357x84/6366f1/ffffff?text=Pawns.app" alt="Pawns.app Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#earnings">Earnings</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="/login" class="cta-button">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Turn Your Internet Into Passive Income</h1>
+                <p>Share your unused bandwidth and earn money effortlessly. Join thousands of users worldwide making steady income with Pawns.app.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#download" class="btn-primary">Start Earning Now →</a>
+                    <a href="#how-it-works" class="btn-secondary">Learn How It Works</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">$2M+</span>
+                        <span class="stat-label">Paid Out</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Pawns.app?</h2>
+                <p>The most trusted platform for earning passive income through internet sharing</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>100% Passive Income</h3>
+                    <p>Set it and forget it. Once installed, the app runs in the background and earns money for you automatically.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Bank-Level Security</h3>
+                    <p>Your privacy is our priority. We never access your personal data, files, or sensitive information.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Global Availability</h3>
+                    <p>Available worldwide with earning opportunities in over 150 countries. Start earning wherever you are.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Payouts</h3>
+                    <p>Get paid quickly through PayPal, Bitcoin, or other popular payment methods with low minimum thresholds.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Multi-Platform</h3>
+                    <p>Works seamlessly on Windows, Android, and iOS. Use unlimited devices on different networks.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Additional Earning Ways</h3>
+                    <p>Complete surveys, refer friends, and participate in special events to maximize your income potential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Start earning in just 3 simple steps</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Sign Up & Download</h3>
+                    <p>Create your free account and download the app for your device. Available for Windows, Android, and iOS.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Install & Connect</h3>
+                    <p>Install the lightweight app and log in with your credentials. The app will automatically start sharing your unused bandwidth.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Earn & Withdraw</h3>
+                    <p>Watch your earnings grow passively. Request payouts anytime through PayPal or other supported payment methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earnings Section -->
+    <section class="earnings" id="earnings">
+        <div class="container">
+            <div class="earnings-content">
+                <div class="earnings-text">
+                    <h2>Multiple Ways to Maximize Your Earnings</h2>
+                    <p>Pawns.app offers various income streams to help you earn more money with minimal effort.</p>
+                    
+                    <ul class="earning-methods">
+                        <li>Share unused internet bandwidth passively</li>
+                        <li>Complete surveys and questionnaires</li>
+                        <li>Refer friends and earn 10% lifetime commission</li>
+                        <li>Use multiple devices on different networks</li>
+                        <li>Participate in special events and contests</li>
+                        <li>Daily spin-the-wheel bonus opportunities</li>
+                    </ul>
+                    
+                    <a href="#download" class="cta-button">Start Earning Today</a>
+                </div>
+                
+                <div class="earnings-visual">
+                    <div class="earnings-chart">
+                        <img src="https://via.placeholder.com/400x200/ffffff/6366f1?text=Earnings+Chart" alt="Earnings Chart" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    </div>
+                    <h3>Average Monthly Earnings</h3>
+                    <p>Users typically earn $20-$150 per month depending on location, number of devices, and additional activities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Start Earning?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Download Pawns.app now and transform your internet connection into passive income</p>
+            
+            <div class="download-buttons">
+                <a href="#" class="download-btn">
+                    <div class="download-icon">🖥️</div>
+                    <div>
+                        <div style="font-weight: 600;">Download for Windows</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Windows 7, 8, 10, 11</div>
+                    </div>
+                </a>
+                
+                <a href="#" class="download-btn">
+                    <div class="download-icon">📱</div>
+                    <div>
+                        <div style="font-weight: 600;">Download for Android</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Android 5.0+</div>
+                    </div>
+                </a>
+                
+                <a href="#" class="download-btn">
+                    <div class="download-icon">🍎</div>
+                    <div>
+                        <div style="font-weight: 600;">Download for iOS</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">iOS 12.0+</div>
+                    </div>
+                </a>
+            </div>
+            
+            <p style="margin-top: 2rem; opacity: 0.8;">✓ Free to download ✓ No subscription fees ✓ Instant setup</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Users Say</h2>
+                <p>Join thousands of satisfied users earning passive income worldwide</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"I've been using Pawns.app for 6 months and it's been incredibly reliable. The passive income really adds up over time, and the payouts are always on schedule."</p>
+                    <div class="testimonial-author">Sarah Chen</div>
+                    <div class="testimonial-role">Software Developer, USA</div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"Perfect for students like me who want to earn some extra money without spending time on it. I just let it run in the background and forget about it."</p>
+                    <div class="testimonial-author">Miguel Rodriguez</div>
+                    <div class="testimonial-role">University Student, Spain</div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"The referral program is amazing! I've earned more from referrals than from sharing bandwidth. Great way to build passive income streams."</p>
+                    <div class="testimonial-author">Emma Thompson</div>
+                    <div class="testimonial-role">Digital Marketer, UK</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/help">Help Center</a></li>
+                        <li><a href="/status">System Status</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/security">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pawns.app. All rights reserved. | Earn passive income by sharing your internet connection safely and securely.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling and animations -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.feature-card, .step, .testimonial').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle (basic implementation)
+        const createMobileMenu = () => {
+            if (window.innerWidth <= 768) {
+                const nav = document.querySelector('.nav');
+                const navLinks = document.querySelector('.nav-links');
+                
+                if (!document.querySelector('.mobile-menu-btn')) {
+                    const mobileMenuBtn = document.createElement('button');
+                    mobileMenuBtn.innerHTML = '☰';
+                    mobileMenuBtn.className = 'mobile-menu-btn';
+                    mobileMenuBtn.style.cssText = `
+                        background: none;
+                        border: none;
+                        font-size: 1.5rem;
+                        color: #4b5563;
+                        cursor: pointer;
+                        display: block;
+                    `;
+                    
+                    mobileMenuBtn.addEventListener('click', () => {
+                        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                        navLinks.style.flexDirection = 'column';
+                        navLinks.style.position = 'absolute';
+                        navLinks.style.top = '100%';
+                        navLinks.style.left = '0';
+                        navLinks.style.right = '0';
+                        navLinks.style.background = 'white';
+                        navLinks.style.padding = '1rem';
+                        navLinks.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+                    });
+                    
+                    nav.appendChild(mobileMenuBtn);
+                }
+            }
+        };
+
+        // Initialize mobile menu on load and resize
+        createMobileMenu();
+        window.addEventListener('resize', createMobileMenu);
+
+        // Form validation for signup (if signup form is added)
+        const validateEmail = (email) => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        };
+
+        // Earnings calculator (interactive feature)
+        const createEarningsCalculator = () => {
+            const earningsChart = document.querySelector('.earnings-chart');
+            if (earningsChart) {
+                earningsChart.innerHTML = '<div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">' +
+                    '<div style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">$45/month</div>' +
+                    '<div style="font-size: 0.9rem; opacity: 0.8;">Average earnings with 2 devices</div>' +
+                    '<div style="margin-top: 1rem; width: 80%; height: 60px; background: rgba(255,255,255,0.2); border-radius: 8px; display: flex; align-items: end; justify-content: space-around; padding: 10px;">' +
+                    '<div style="background: rgba(255,255,255,0.8); width: 15%; height: 30%; border-radius: 2px;"></div>' +
+                    '<div style="background: rgba(255,255,255,0.8); width: 15%; height: 50%; border-radius: 2px;"></div>' +
+                    '<div style="background: rgba(255,255,255,0.8); width: 15%; height: 70%; border-radius: 2px;"></div>' +
+                    '<div style="background: rgba(255,255,255,0.8); width: 15%; height: 90%; border-radius: 2px;"></div>' +
+                    '<div style="background: rgba(255,255,255,0.8); width: 15%; height: 100%; border-radius: 2px;"></div>' +
+                    '</div>' +
+                    '</div>';
+            }
+        };
+
+        // Initialize earnings calculator
+        createEarningsCalculator();
+
+        // Add loading states for download buttons
+        document.querySelectorAll('.download-btn, .cta-button, .btn-primary, .btn-secondary').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                // Only add loading state for actual download/action buttons, not navigation
+                if (this.href && !this.href.includes('#')) {
+                    e.preventDefault();
+                    const originalText = this.innerHTML;
+                    this.innerHTML = this.innerHTML.replace(/Download|Start|Learn/, 'Loading...');
+                    this.style.opacity = '0.7';
+                    this.style.pointerEvents = 'none';
+                    
+                    // Simulate loading (in real app, this would be actual download/redirect)
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.style.opacity = '1';
+                        this.style.pointerEvents = 'auto';
+                        // In real implementation, initiate download or redirect
+                        console.log('Download/action initiated for:', this.href);
+                    }, 2000);
+                }
+            });
+        });
+
+        // Add counter animation for stats
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.stat-number');
+            const targets = ['50000', '2000000', '150'];
+            const suffixes = ['+', '+', '+'];
+            
+            counters.forEach((counter, index) => {
+                const target = parseInt(targets[index]);
+                const suffix = suffixes[index];
+                let current = 0;
+                const increment = target / 100;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    
+                    let displayValue = Math.floor(current);
+                    if (index === 0) displayValue = (displayValue / 1000).toFixed(0) + 'K';
+                    if (index === 1) displayValue = '    <h3>Pawns.app</h3>
+                    <p>Transform your internet connection into passive income with the most trusted bandwidth sharing platform.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#earnings">Earnings</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="/referral">Referral Program</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                 + (displayValue / 1000000).toFixed(1) + 'M';
+                    
+                    counter.textContent = displayValue + suffix;
+                }, 50);
+            });
+        };
+
+        // Trigger counter animation when hero section is visible
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    heroObserver.disconnect();
+                }
+            });
+        });
+
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            heroObserver.observe(heroStats);
+        }
+
+        // Add scroll-to-top functionality
+        const createScrollToTop = () => {
+            const scrollBtn = document.createElement('button');
+            scrollBtn.innerHTML = '↑';
+            scrollBtn.style.cssText = `
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+                color: white;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 1000;
+                box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            `;
+            
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            document.body.appendChild(scrollBtn);
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    scrollBtn.style.opacity = '1';
+                    scrollBtn.style.visibility = 'visible';
+                } else {
+                    scrollBtn.style.opacity = '0';
+                    scrollBtn.style.visibility = 'hidden';
+                }
+            });
+        };
+
+        createScrollToTop();
+
+        // Performance optimization: Lazy load images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Add keyboard navigation support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('using-keyboard');
+            }
+        });
+
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('using-keyboard');
+        });
+
+        // Console log for developers
+        console.log('%cPawns.app Landing Page', 'color: #6366f1; font-size: 20px; font-weight: bold;');
+        console.log('%cBuilt with modern web technologies for optimal performance and SEO', 'color: #8b5cf6; font-size: 12px;');
+    </script>
+
+    <!-- SEO and Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for FAQ (if FAQ section is added) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How much can I earn with Pawns.app?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Earnings vary by location and usage, but users typically earn $20-$150 per month depending on their internet connection, number of devices, and participation in surveys."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Pawns.app safe to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Pawns.app is completely safe. We never access your personal files, contacts, or sensitive data. The app only uses your unused internet bandwidth."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What devices are supported?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pawns.app supports Windows (7, 8, 10, 11), Android (5.0+), and iOS (12.0+). You can use unlimited devices on different networks."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>    
+                
